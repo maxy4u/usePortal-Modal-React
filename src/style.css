@@ -1,0 +1,112 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.modal {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 60%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  backdrop-filter: blur(5px);
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* .modal {
+  width: 30vw;
+  height: auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+} */
+.modal .modal__header {
+  position: relative;
+  border-bottom: 1px solid #dddddd;
+}
+.modal .modal__header .title {
+  text-align: center;
+}
+.modal .modal__header .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+}
+.modal .modal__content {
+  border-bottom: 1px solid #dddddd;
+  padding: 2rem 0;
+}
+.modal .modal__footer {
+  padding: 2rem 0;
+  padding-bottom: 0;
+}
+.modal .modal__footer button {
+  border: 0;
+  background: #78f89f;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+.modal-close {
+  background-color: transparent;
+  font-weight: 600;
+}
+.modal-close:hover {
+  color: rgba(54, 67, 72, 0.8);
+}
